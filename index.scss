@@ -1,0 +1,236 @@
+$secondary-color:#125688;
+
+@import "node_modules/materialize-css/sass/materialize.scss";
+
+body {
+  background: #fafafa;
+  color:#125688;
+  font-family: 'Montserrat';
+}
+.landing{
+  margin: 30px auto;
+}
+.iphone{
+  max-width: 80%;
+}
+.site-footer{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.login-box,
+.signup-box{
+  background-color: white;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+  padding:  10px 0 ;
+  text-align: center;
+}
+.platzigram{
+  font-family: 'Oleo Script';
+  font-size: 50px;
+  color : $secondary-color !important;
+}
+.signup-form{
+  width:70%;
+  margin: 0 auto;
+}
+.signup-form h2{
+  color:#a5a7aa;
+  font-size: 1.2em;
+}
+.signup-form .btn.btn-fb{
+  background-color: #4090db;
+  font-size: .7em;
+}
+.signup-form .btn.btn-fb:hover{
+  background-color: #2d6599;
+}
+.signup-form .btn.btn-signup{
+  background-color: #125688;
+  font-size: .8em;
+}
+.signup-form .btn.btn-signup:hover{
+  background-color: #2d6599;
+}
+.header{
+  width: 100%;
+  margin-top : 5px;
+  background-color: white;
+  color: $secondary-color;
+  box-shadow: none;
+  border-bottom: 1px solid #edeeee;
+}
+.timeline{
+  padding:30px 0;
+}
+$avatar-size:48px;
+.card .avatar {
+  width: $avatar-size;
+  border-radius: 50%;
+  float: left;
+  margin-right: 12px;
+}
+.card small.time{
+  line-height: $avatar-size;
+}
+.card p{
+  padding:20px 0;
+}
+.card .likes{
+  line-height: 30px;
+  margin-left: 12px;
+}
+.card i{
+  font-size: 30px;
+}
+.card .fa-heart-o{
+  color: $secondary-color;
+}
+.card .username{
+  color: $secondary-color;
+}
+.card .fa-heart{
+  color: #f44336;
+  display: none;
+}
+.card.liked{
+  .fa-heart {
+    display: block;
+  }
+  .fa-heart-o{
+    display: none;
+  }
+}
+.form-upload {
+  span, button{
+    color: white;
+  }
+  .fileUpload {
+    position:relative;
+    overflow: hidden;
+    margin: 10px;
+    input {
+      position: absolute;
+      bottom:0;
+      top: 0;
+      right: 0;
+      margin: 0;
+      font-size:20px;
+      cursor: pointer;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      }
+    }
+}
+
+.user-page {
+  padding:30px 0;
+  .userDescription{
+    color: $secondary-color;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  .username{
+    color:$secondary-color;
+    font-size: 30px;
+  }
+  .avatar{
+    width: 50%;
+    border-radius: 50%;
+  }
+}
+.user-pictures{
+  margin-top: 10px;
+  .user-pic {
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      display: block;
+    }
+    .overlay {
+      border-radius: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: $secondary-color;
+      .likes {
+        color: white;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .user-pic:hover {
+    .overlay {
+      opacity: .7;
+    }
+  }
+}
+.division{
+  margin-top:10em;
+}
+
+.like-heart {
+  font-size: 10em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  transition: all .5s ease;
+  opacity: 0;
+
+  &.liked {
+    color: #f44336;
+    font-size: 12em;
+    display: block;
+    transition: all .5s ease;
+    opacity: .7;
+  }
+}
+
+#modalCamara {
+  .camera-picture {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      width: 400px;
+      height: 300px;
+      top: 0;
+      transition: all .5s ease;
+      opacity: 1;
+    }
+
+    .overlay {
+      opacity: 0;
+    }
+
+    img {
+      width: 400px;
+      height: 300px;
+    }
+  }
+
+  button {
+    float: none;
+  }
+}
